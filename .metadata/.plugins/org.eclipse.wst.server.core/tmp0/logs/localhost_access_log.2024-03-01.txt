@@ -1,0 +1,9 @@
+127.0.0.1 - - [01/Mar/2024:16:55:04 +0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:04 +0700] "GET /AppDictionaryClient/sampleManagerDictionaryProxy/TestClient.jsp HTTP/1.1" 200 586
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:04 +0700] "GET /AppDictionaryClient/sampleManagerDictionaryProxy/Method.jsp HTTP/1.1" 200 652
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:04 +0700] "GET /AppDictionaryClient/sampleManagerDictionaryProxy/Input.jsp HTTP/1.1" 200 1075
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:04 +0700] "GET /AppDictionaryClient/sampleManagerDictionaryProxy/Result.jsp? HTTP/1.1" 200 140
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:04 +0700] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:10 +0700] "GET /AppDictionaryClient/sampleManagerDictionaryProxy/Input.jsp?method=32 HTTP/1.1" 200 1868
+127.0.0.1 - - [01/Mar/2024:16:55:19 +0700] "POST /AppDictionary/services/ManagerDictionary HTTP/1.0" 200 381
+0:0:0:0:0:0:0:1 - - [01/Mar/2024:16:55:19 +0700] "POST /AppDictionaryClient/sampleManagerDictionaryProxy/Result.jsp HTTP/1.1" 200 149

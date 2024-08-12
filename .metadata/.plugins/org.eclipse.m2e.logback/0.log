@@ -1,0 +1,28 @@
+2023-05-13 13:28:24,701 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-13 13:34:29,523 [main] INFO  org.eclipse.jetty.server.Server - jetty-10.0.13; built: 2022-12-07T20:13:20.134Z; git: 1c2636ea05c0ca8de1ffd6ca7f3a98ac084c766d; jvm 17.0.6+10
+2023-05-13 13:34:29,637 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2023-05-13 13:34:29,664 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@17888e56{/wse,null,AVAILABLE}
+2023-05-13 13:34:29,688 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4d30ec47{HTTP/1.1, (http/1.1)}{0.0.0.0:49853}
+2023-05-13 13:34:29,691 [main] INFO  org.eclipse.jetty.server.Server - Started Server@6cc35f3b{STARTING}[10.0.13,sto=0] @387445ms
+2023-05-13 13:35:18,431 [Framework stop - Equinox Container: 431751d6-2cc4-46bb-9f60-2e8001c9196a] INFO  org.eclipse.jetty.server.Server - Stopped Server@6cc35f3b{STOPPING}[10.0.13,sto=0]
+2023-05-13 13:35:18,435 [Framework stop - Equinox Container: 431751d6-2cc4-46bb-9f60-2e8001c9196a] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4d30ec47{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2023-05-13 13:35:18,454 [Framework stop - Equinox Container: 431751d6-2cc4-46bb-9f60-2e8001c9196a] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@17888e56{/wse,null,STOPPED}
+2023-05-13 13:40:09,633 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-13 13:54:32,783 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-13 14:20:28,536 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-06-24 21:27:17,716 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-09-05 14:42:43,538 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-09-05 20:52:49,418 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-09-07 14:22:19,394 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-11-03 13:53:19,877 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-02-04 12:43:01,675 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-02-18 22:08:28,869 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-03-01 10:48:24,033 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-03-01 10:56:26,603 [Worker-5: https://download.eclipse.org/webtools/downloads/drops/R3.31.0/R-3.31.0-20230903090456/repository/content.xml.xz] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2024-03-01 16:39:57,316 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-03-02 09:03:57,250 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-03-08 09:48:18,940 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-07-25 16:58:10,952 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-08-06 22:08:21,105 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-08-06 22:20:52,425 [Worker-35: https://download.eclipse.org/usssdk/drops/milestone/S20170523-143239-1.1-RC1/artifacts.jar] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (java.net.SocketException) caught when processing request to {s}->https://download.eclipse.org:443
+2024-08-13 00:09:25,389 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

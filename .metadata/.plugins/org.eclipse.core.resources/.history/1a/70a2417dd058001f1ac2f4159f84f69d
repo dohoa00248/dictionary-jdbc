@@ -1,0 +1,149 @@
+package dictionary;
+
+import java.rmi.RemoteException;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
+
+public class ManagerDictionary implements MyInterface {
+
+
+	public ManagerDictionary() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean addDictionary(int id,String word, String mean, String type) throws RemoteException {
+		// TODO Auto-generated method stub
+		Connection conn = null;
+		try {
+				conn = ConnectJDBC.getConectJDBC();
+	            String sql = "INSERT INTO dictionarytable  VALUES (?,?,?,?)"; // Lệnh INSERT
+	            PreparedStatement statement = conn.prepareStatement(sql);
+	            statement.setInt(1,id);
+	            statement.setString(2,word); // Thiết lập giá trị cho tham số thứ nhất (name)
+	            statement.setString(3,mean); // Thiết lập giá trị cho tham số thứ hai (age)
+	            statement.setString(4,type);
+	            statement.executeUpdate(); // Thực thi lệnh INSERT
+	      
+	            System.out.println("Dữ liệu đã được insert thành công vào MySQL.");
+	            statement.close();
+	            conn.close();
+	            return true;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+		}
+		return false;
+		
+	}
+
+	@Override
+	public String searchDictionary(String word) throws RemoteException {
+		// TODO Auto-generated method stub
+		Connection conn = null;
+		try {
+			conn = ConnectJDBC.getConectJDBC();
+			
+			String sql ="Select * from dictionarytable where word = ?";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			statement.setString(1,word);
+			ResultSet rs = statement.executeQuery();
+			
+			while(rs.next())
+			{
+				// Retrieve by column name
+				
+				String mean = rs.getString("mean");
+		
+				return "Word and mean of dictionary is"+"\t"+word+"\t"+"and"+"\t"+mean;
+				
+			}
+			rs.close();
+			statement.close();
+			conn.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			
+		}
+		return null;
+	
+	}
+
+	@Override
+	public boolean delDictionary(String word) throws RemoteException {
+		// TODO Auto-generated method stub
+		Connection conn = null;
+		try {
+			conn = ConnectJDBC.getConectJDBC();
+			String sql ="Delete from dictionarytable where word = ?";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			statement.setString(1,word);
+			int rowsDeleted = statement.executeUpdate();
+
+	         if (rowsDeleted > 0) {
+	            System.out.println("Word deleted successfully");
+	            return true;
+	         } 
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return false;
+	}
+	/*
+	@Override
+	public boolean updateDictionary(String word, String mean) throws RemoteException {
+		// TODO Auto-generated method stub
+		Connection conn = null;
+		try {
+			conn = ConnectJDBC.getConectJDBC();
+			String sql ="UPDATE dictionarytable SET mean=? WHERE word=?";
+			PreparedStatement statement = conn.prepareStatement(sql);
+			
+			statement.setString(1, word);
+			statement.setString(2, mean);
+			//statement.setString(3, type);
+			int rowsUpdated = statement.executeUpdate();
+
+	         if (rowsUpdated > 0) {
+	            System.out.println("Record updated successfully");
+	            return true;
+	         } 
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return false;
+	}
+	*/
+	@Override
+	public boolean update(String word, String mean, String type) throws RemoteException{
+		try {
+			Connection connection = ConnectJDBC.getConectJDBC();
+			String sql = "UPDATE Dictionarytable SET mean=?,type=? WHERE word=?";
+			PreparedStatement statement = connection.prepareStatement(sql);
+			statement.setString(1, mean);
+			statement.setString(2, type);
+			statement.setString(3, word);
+			int rowsUpdated = statement.executeUpdate();
+			if (rowsUpdated > 0) {
+				System.out.println("An existing word was updated successfully!");
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+}

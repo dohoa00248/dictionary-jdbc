@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ManagerDictionaryService WSDL service -->
+
+  <service name="ManagerDictionary" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://dictionary"/>
+      <parameter name="wsdlServiceElement" value="ManagerDictionaryService"/>
+      <parameter name="schemaQualified" value="http://dictionary"/>
+      <parameter name="wsdlServicePort" value="ManagerDictionary"/>
+      <parameter name="className" value="dictionary.ManagerDictionary"/>
+      <parameter name="wsdlPortType" value="ManagerDictionary"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://dictionary" xmlns:retNS="http://dictionary" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="update" qname="operNS:update" returnQName="retNS:updateReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:word" type="tns:string"/>
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:mean" type="tns:string"/>
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:type" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://dictionary" xmlns:retNS="http://dictionary" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="searchDictionary" qname="operNS:searchDictionary" returnQName="retNS:searchDictionaryReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:word" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://dictionary" xmlns:retNS="http://dictionary" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="delDictionary" qname="operNS:delDictionary" returnQName="retNS:delDictionaryReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:word" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://dictionary" xmlns:retNS="http://dictionary" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addDictionary" qname="operNS:addDictionary" returnQName="retNS:addDictionaryReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:int"/>
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:word" type="tns:string"/>
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:mean" type="tns:string"/>
+        <parameter xmlns:pns="http://dictionary" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:type" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="addDictionary searchDictionary delDictionary update"/>
+
+  </service>
+</deployment>

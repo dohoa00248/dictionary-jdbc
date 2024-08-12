@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+D:\PTHTPT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3327633377.index
+\AppDictionaryClient\src\main\java
